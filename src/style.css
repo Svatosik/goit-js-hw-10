@@ -56,10 +56,6 @@ body {
   }
 }
 
-
-.container > img{
-    display: block;
-}
 .container{
     display: flex;
     margin-top: 30px;
