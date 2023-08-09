@@ -4,7 +4,7 @@ axios.defaults.headers.common['x-api-key'] =
   'live_lUgpZbgC3NGGA3aWJrXy0vUJgWER9dLhz7duFnCnXJso88wePXI8yHUKVnA2IYIB';
 const BASE_URL = ' https://api.thecatapi.com/v1';
 
-function fetchBreeds() {
+export function fetchBreeds() {
   //декларація безагрументової функції fetchBreeds, яка буде експортуватись, данна функція повертає проміс зі всіма породами
   return axios.get(`${BASE_URL}/breeds`)
         .then(resp => {
@@ -12,7 +12,7 @@ function fetchBreeds() {
   });
 }
 
-function fetchCatByBreed(breedId) {
+export function fetchCatByBreed(breedId) {
   //декларація безагрументової функції fetchBreeds, яка буде експортуватись, данна функція повертає проміс з інформацією про певну породу
    return axios
      .get(`${BASE_URL}/images/search?breed_ids=${breedId}`)
@@ -22,4 +22,4 @@ function fetchCatByBreed(breedId) {
 
 }
 
-export { fetchCatByBreed, fetchBreeds };
+
