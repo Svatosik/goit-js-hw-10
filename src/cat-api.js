@@ -13,7 +13,7 @@ export function fetchBreeds() {
 }
 
 export function fetchCatByBreed(breedId) {
-  //декларація безагрументової функції fetchBreeds, яка буде експортуватись, данна функція повертає проміс з інформацією про певну породу
+  //декларація  функції fetchBreeds, яка буде експортуватись, данна функція повертає проміс з інформацією про певну породу
    return axios
      .get(`${BASE_URL}/images/search?breed_ids=${breedId}`)
      .then(resp => {
